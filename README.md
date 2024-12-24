@@ -20,8 +20,20 @@ The text file 'names.txt' contains more than 32k names, using these names the bi
 5.  Using the kaiming weight initialization, multiplying the weights by a factor of '5/3' to prevent the over shrinking of values by the tanh activation layer, the embedding dimensions were 10 and the number of neurons in hidden layer were 200
 6.  The model was trained for 200000 steps and with a batch size of 32, a decaying learning rate algorithm was used
 
-### Metrics obtained
+### Metrics achieved
 -  Training Accuracy: 1.9712
 -  Validation Accuracy: 2.0715
+
+-  Activation Distribution
+
+![Activation distribution](Images/Activations&Saturations.png)
+
+-  Gradients to Parameters ratio
+
+![Gradients to data ratio](Images/Gradients_to_data_ratio.png)
+
+-  Parameters update to Parameters ratio
+
+![Data_update_to_data_ratio](Images/Data_update_to_data_ratio.png)
 
 
