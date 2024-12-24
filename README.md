@@ -10,7 +10,8 @@ In this project I have implemented a Multi Layer Perceptron character level lang
 -  pip (Python Package Installer)
 
 ###  Dataset Overview
-The text file 'names.txt' contains more than 32k names, using these names the bigram model is trained.
+-  The text file 'names.txt' contains more than 32k names, using these names the bigram model is trained. The vocabulary size obtained from considering all the unique characters is 27 and a end token ('.'). 
+-  I also created a string to integer and integer to string mapping for indexing and training purposes.
 
 ###  Process
 1.  Read the 'names.txt' file and got all the characters from the text
@@ -43,5 +44,6 @@ This plot shows the update that each parameter undergoes during backpropagation.
 
 ###  Generation from the model:
 -  Here's the names that the model generated:
-
+  
+![image](Images/names.png)
 
