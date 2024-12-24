@@ -9,10 +9,10 @@ In this project I have implemented a Multi Layer Perceptron character level lang
 -  Cudo 10.1 or higher (for GPU support)
 -  pip (Python Package Installer)
 
-##  Dataset Overview
+###  Dataset Overview
 The text file 'names.txt' contains more than 32k names, using these names the bigram model is trained.
 
-##  Process
+###  Process
 1.  Read the 'names.txt' file and got all the characters from the text
 2.  Made a string to integer and integer to string mapping of all the characters
 3.  The number of characters(block_size) considered for lookback is 3, created a multidimensional list that will store lists containing 3 previous characters and a targets list that stores the preceding character
@@ -23,17 +23,25 @@ The text file 'names.txt' contains more than 32k names, using these names the bi
 ### Metrics achieved
 -  Training Accuracy: 1.9712
 -  Validation Accuracy: 2.0715
-
 -  Activation Distribution
 
 ![Activation distribution](Images/Activations&Saturations.png)
+
+This is a histogram that shows the values of activation of tanh function during forward propagation for all hidden layers except the last layer. The plot shows that how many activations take a value between -1.0 and 1.0(range of tanh). The purpose of this plot was to visualize the activations and ensure that the saturation is under a certain threshold. Throught this plot we can visualize how the weight initializations affect the values of the activations in the hidden layers
 
 -  Gradients to Parameters ratio
 
 ![Gradients to data ratio](Images/Gradients_to_data_ratio.png)
 
--  Parameters update to Parameters ratio
+This is a plot that shows the ratio of all the gradients of the weights by the weights of the linear layers. The gradient to data ratio is ideally around 1e-2, which as visible from the plot I was able to obtain.
+
+-  Weights update to Weights ratio
 
 ![Data_update_to_data_ratio](Images/Data_update_to_data_ratio.png)
+
+This plot shows the update that each parameter undergoes during backpropagation. This plot helps us to find the ideal learning rate, if the size of the updates is small (less than -3) then we can increase the learning rate and vice versa. 
+
+###  Generation from the model:
+-  Here's the names that the model generated:
 
 
